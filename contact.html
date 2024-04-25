@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <h2 style="text-align: left;">
+        So finden Sie uns: Kontakt & Anfahrt.</h2>
+        <br>
+        <table>
+            <tr>
+                <td>
+        <form id="myForm" action="/submit-form" method="post" style="text-align: left;">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+            <button type="button" onclick="showMessage()">Submit</button>
+          </form>
+          
+          <script>
+            function showMessage() {
+              alert("Thank you for your submission!");
+              document.getElementById("myForm").reset(); // Reset the form
+            }
+          </script>
+          </td>
+          <td>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160842.04207295558!2d6.802514282252475!3d50.957803162052414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf259169ab2fe5%3A0x42760fc4a2a77f0!2zS8O2bG4!5e0!3m2!1sde!2sde!4v1714048393542!5m2!1sde!2sde" width="600" height="450"
+           style="border:0;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </td>
+        </tr>
+        </table>
+        <br>
+
+</body>
+</html>

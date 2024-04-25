@@ -1,0 +1,130 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 20px 0;
+    
+    
+}
+
+ h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    
+}
+/* List Styles */
+ol {
+    margin-left: 20px; /* Adjust margin as needed */
+    font-size: 16px; /* Adjust font size as needed */
+}
+h1:hover {
+    /* Your hover styles here */
+    color: red;
+  }
+  
+  h1:active {
+    /* Your click (active) styles here */
+    font-weight: bold;
+  }
+  .text-overlay {
+    position: absolute;
+    top: 50%; /* Position the text in the middle vertically */
+    left: 50%; /* Position the text in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white;
+     /* Set background color with opacity */
+    padding: 10px; /* Add padding for better readability */
+  }  
+header p {
+    font-size: 18px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #f39c12;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #d35400;
+}
+
+/* Button Styles */
+button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+p {
+
+font-size: medium;
+text-align: justify;
+margin-left: 10%;
+margin-right: 10%;
+font-weight: bold;
+
+}
+p:hover {
+    /* Your hover styles here */
+    color: red;
+  }
+  
+  p:active {
+    /* Your click (active) styles here */
+    font-weight: bold;
+  }
