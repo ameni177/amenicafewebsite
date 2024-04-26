@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <style>
+    select {
+      font-size: 20px;
+    }
+    header {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 20px 0;
+    
+    
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #d35400;
+}
+nav {
+    background-color: #f39c12;
+    padding: 10px 0;
+}
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: blueviolet;
+      transition: color 0.3s ease;
+    }
+    h1:hover {
+      color: purple; /* Change color on hover */
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      margin: 10px;
+      width: 200px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+    }
+    .event-details {
+      display: none;
+    }
+  </style>
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>
+      Kommende Veranstaltungen im Sonnenschein Cafe: Live-Musikabend,
+      Kaffeeverkostung, Osterbrunch.
+    </h1>
+    <label for="eventSelect">
+      <h2>Welche Veranstaltung möchtest du Dir anschauen 🙂</h2></label
+    >
+    <select id="eventSelect" onchange="showEventDetails()" onclick="showEventDetails()">
+      <option value="coffee">Kaffee-Verkostungsworkshop</option>
+      <option value="brunch">Themenbrunch: Frühlingsfest</option>
+      <option value="propose">propose an Event</option>
+    </select>
+    <br />
+    <br>
+    <div id="coffeeDetails" class="event-details">
+      <h2>Kaffee-Verkostungsworkshop</h2>
+      <p>
+        Date: Sonntag, 15. Mai | Zeit: 10:00 Uhr - 12:00 Uhr | Ort: Sonnenschein
+        Cafe
+      </p>
+      <p>
+        Tauchen Sie ein in die faszinierende Welt des Kaffees! Unser
+        Kaffee-Verkostungsworkshop bietet Ihnen die Möglichkeit, verschiedene
+        Kaffeesorten aus aller Welt zu entdecken und Ihre Sinne zu schärfen.
+        Erfahren Sie mehr über die Herkunft, Anbau- und Röstverfahren sowie
+        Geschmacksprofile von Kaffeebohnen. Unsere erfahrenen Baristas führen
+        Sie durch die Verkostung und geben Ihnen wertvolle Tipps zur Zubereitung
+        und Genuss von Kaffee zuhause. Ein Muss für alle Kaffeeliebhaber und
+        Neugierige!
+      </p>
+      <div class="gallery">
+        <img src="cafeworkshop1.webp" alt="Image 1" />
+        <img src="cafeworkshop2.webp" alt="Image 2" />
+        <img src="cafeworkshop3.webp" alt="Image 3" />
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+
+    <div id="brunchDetails" class="event-details">
+      <h2>Themenbrunch: Frühlingsfest</h2>
+      <p>
+        Date: Sonntag, 15. Mai | Zeit: 10:00 Uhr - 12:00 Uhr | Ort: Sonnenschein
+        Cafe
+      </p>
+      <p>
+        Feiern Sie den Frühling mit unserem besonderen Themenbrunch! Genießen
+        Sie eine Vielzahl von frischen Frühlingsgerichten, saisonalen
+        Spezialitäten und erfrischenden Getränken in gemütlicher Atmosphäre. Wir
+        verwöhnen Sie mit köstlichen Frühstückskreationen, herzhaften Leckereien
+        und süßen Versuchungen, inspiriert von den frischen Aromen und Farben
+        der Saison. Lassen Sie sich von unserem Frühlingsfest verwöhnen und
+        genießen Sie einen entspannten Sonntagmorgen mit Familie und Freunden!
+      </p>
+      <div class="gallery">
+        <img src="f1.jpg" alt="Image 1" />
+        <img src="f2.jpg" alt="Image 2" />
+        <img src="f3.jpeg" alt="Image 3" />
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+    <div id="noselected" style="display: block; align-items: center;justify-content: center; display: flex;">
+      <img src="event.jpg" style="margin-left: 30px; margin-right: 30px; width: 600px; height: 1200;" />
+      <fieldset>
+        <legend style="font-weight: bold;">Deine Vorschläge sind immer Willkommen:</legend>
+        <form>
+        
+        <label for="Eventname"> Ein Event vorschlagen</label><br>
+        <input id="Eventname" type="text">
+        <br>
+        <label for="eventdet"> Mehr Details</label><br>
+        <textarea id="eventdet" minlength="30"></textarea><br>
+        <input type="submit">
+      </form>
+    </fieldset>
+    </div>
+
+    <script>
+      function showEventDetails() {
+        var select = document.getElementById("eventSelect");
+        var selectedEvent = select.value;
+        var coffeeDetails = document.getElementById("coffeeDetails");
+        var brunchDetails = document.getElementById("brunchDetails");
+        var noselected = document.getElementById("noselected");
+
+        if (selectedEvent === "coffee") {
+          coffeeDetails.style.display = "block";
+          brunchDetails.style.display = "none";
+          noselected.style.display = "none";
+        } else if (selectedEvent === "brunch") {
+          coffeeDetails.style.display = "none";
+          brunchDetails.style.display = "block";
+          noselected.style.display = "none";
+        } else {
+          coffeeDetails.style.display = "none";
+          brunchDetails.style.display = "none";
+          noselected.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
